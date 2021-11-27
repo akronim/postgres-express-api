@@ -1,0 +1,128 @@
+expressjs — Expressjs is a nodejs web application framework that gives us the ability to create quick and easy APIs.
+PG— PG is a NodeJs package for interfacing with the PostgreSQL database.
+JSON Web Token (JWT)— is an open standard for securely transmitting information between parties as a JSON object. It’s pronounced jot, or as our Dutch friends would say, yaywaytay. JWT is commonly used for authorization. JWTs can be signed using a secret or a public/private key pair. Once a user is logged in, each subsequent request will require the JWT, allowing the user to access routes, services, and resources that are permitted with that token.
+Body Parser — Parse incoming request bodies in a middleware before your handlers, available under the req.body property.
+Moment — Is a lightweight JavaScript date library for parsing, validating, manipulating, and formatting dates.
+Dotenv — Is a zero-dependency module that loads environment variables from a .env file into process.env
+CORS (Cross Origin Resource Sharing) — Is a node.js package that allows requests to skip the Same-origin policy and access resources from remote hosts.
+Bcryptjs — is a secured way to help you hash passwords.
+@babel/polyfill — is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript in current and older browsers or environments.
+babel watch — This is needed for development. One thing that babel watch package does is to compile our code and reload the server each time we make changes to our code.
+
+
+
+# create a new directory
+mkdir app-backend
+
+# change to the newly-created directory
+cd app-backend
+
+# initialize a new Node.js project
+npm init -y
+
+touch README.md
+
+touch .editorconfig
+
+# initialize the project folder as a git repository
+git init
+
+touch .gitignore
+
+# install the express generator globally
+sudo npm install express-generator -g
+
+# install express
+npm i --save express
+
+# generate the express project in the current folder
+express -f --no-view --git
+
+   install dependencies:
+     $ npm install
+
+   run the app:
+     $ DEBUG=app-backend-2:* npm start
+
+rm -rf public
+
+rename bin/www to bin/www.js
+
+├── node_modules
+├── src
+|   ├── bin
+│   │   ├── www.js
+│   ├── routes
+│   |   ├── index.js
+│   └── app.js
+├── .editorconfig
+├── .gitignore
+├── package.json
+├── package-lock.json
+├── README.md
+
+# install babel scripts
+$ npm install --save-dev @babel/cli @babel/core @babel/plugin-transform-runtime @babel/preset-env @babel/register @babel/runtime @babel/node
+
+@babel/cli	A required install for using babel. It allows the use of Babel from the terminal and is available as ./node_modules/.bin/babel.
+@babel/core	Core Babel functionality. This is a required installation.
+@babel/node	This works exactly like the Node.js CLI, with the added benefit of compiling with babel presets and plugins. This is required for use with nodemon.
+@babel/plugin-transform-runtime	This helps to avoid duplication in the compiled output.
+@babel/preset-env	A collection of plugins that are responsible for carrying out code transformations.
+@babel/register	This compiles files on the fly and is specified as a requirement during tests.
+@babel/runtime	This works in conjunction with @babel/plugin-transform-runtime.
+
+
+$ npm install --save-dev nodemon
+
+$ touch .babelrc
+
+$ touch nodemon.json
+
+# install elsint and prettier
+npm install --save-dev eslint eslint-config-airbnb-base eslint-plugin-import prettier
+
+$ touch .eslintrc.json
+
+$ touch .prettierrc
+
+$ touch .env
+$ touch .env_example
+
+# install dotenv
+npm install --save dotenv
+
+npm install --save http-errors
+
+
+# TESTS - install dependencies
+npm install --save-dev mocha chai nyc sinon-chai supertest coveralls faker sinon chai-as-promised
+
+mocha	test runner
+chai	used to make assertions
+nyc	collect test coverage report
+sinon-chai	extends chai’s assertions
+supertest	used to make HTTP calls to our API endpoints
+coveralls	for uploading test coverage to coveralls.io
+
+mkdir test
+touch test/setup.js
+touch test/index.test.js
+
+
+mkdir src/controllers
+
+
+# install node-postgres
+npm install --save pg
+
+$ mkidr src/models
+
+$ mkdir src/utils
+
+$ mkdir src/middleware
+
+$ npm install --save express pg moment body-parser dotenv jsonwebtoken cors make-runnable bcryptjs uuid helmet axios 
+
+
+require('crypto').randomBytes(64).toString('hex')
